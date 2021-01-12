@@ -11,6 +11,7 @@ class Queue {
     let front = null,
       rear = null;
 
+    // function for inserting the values in queue
     this.enqueue = (...values) => {
       // loop to iterate over the inpu Values
       for (let data of values) {
@@ -20,6 +21,7 @@ class Queue {
       }
     };
 
+    // function to delete the values in queue
     this.dequeue = () => {
       // checking if the Queue is Empty
       if (front === null) return null;
