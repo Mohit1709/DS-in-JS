@@ -38,7 +38,8 @@ class Vector {
       }
     };
 
-    this.print = () => {
+    // function to print the values of list
+    this.traverse = () => {
       // Checking if the list is Empty
       if (head === null) return null;
 

@@ -1,4 +1,4 @@
-class doublyLL {
+class DoublyLL {
   constructor() {
     // Declaring Doubly LinkList Node
     class node {
@@ -45,12 +45,20 @@ class doublyLL {
       }
     };
 
-    this.print = () => {
+    // function to print the values of list
+    // which takes an number as argument for selection the direction of traversing
+    // by Default it is 1 if the value is negative it traverse in reverse order
+    this.traverse = (direction = 1) => {
       // Checking if the list is Empty
       if (head === null) return null;
 
       // Printing all data of list
-      for (let cur = head; cur; cur = cur.next) console.log(cur.data);
+      for (
+        let cur = direction >= 0 ? head : tail;
+        cur;
+        cur = direction >= 0 ? cur.next : cur.prev
+      )
+        console.log(cur.data);
     };
   }
 }

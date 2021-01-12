@@ -28,7 +28,8 @@ class Queue {
       else front = front.back;
     };
 
-    this.print = () => {
+    // function to print the values of Queue
+    this.traverse = () => {
       // checking if the Queue is Empty
       if (front === null) return null;
 
