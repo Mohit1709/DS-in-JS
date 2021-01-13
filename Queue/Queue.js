@@ -38,7 +38,3 @@ class Queue {
     };
   }
 }
-
-let a = new Queue();
-a.enqueue(10, 20, 40, 0, 20);
-a.print();
