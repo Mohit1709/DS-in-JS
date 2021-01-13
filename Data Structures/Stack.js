@@ -26,6 +26,17 @@ class Stack {
       return temp;
     };
 
+    // function to return the top value without deleting it
+    this.peep = () => stack[top];
+
+    // function to change the value of top of stack
+    this.change = (val) => {
+      // checking if the stack is underflow
+      if (top === -1) return -1;
+
+      stack[top] = val;
+    };
+
     // function to print the values of stack
     this.traverse = () => {
       // printing all the values of stack
