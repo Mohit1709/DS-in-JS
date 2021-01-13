@@ -1,4 +1,4 @@
-// javaScript itself works as an Stack,
+// javaScript Array itself works as an Stack,
 // as Arrays of js are objects with method like,
 //  push and pop method just as stack
 // but with no restriction
