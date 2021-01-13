@@ -1,5 +1,5 @@
 // Linked List
-class Vector {
+class LinkedList {
   constructor() {
     let head = null,
       tail = null;

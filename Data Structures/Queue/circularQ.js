@@ -1,5 +1,5 @@
-// Queue using LinkedList
-class Queue {
+// Circular Queue using Linked List
+class circularQueue {
   constructor() {
     // Initializing the node for Queue
     class node {
@@ -19,6 +19,8 @@ class Queue {
         // checking if the Queue is Empty
         if (front === null) rear = front = new node(data);
         else rear = rear.back = new node(data);
+
+        rear.back = front;
       }
     };
 
@@ -26,7 +28,9 @@ class Queue {
     this.dequeue = () => {
       // checking if the Queue is Empty
       if (front === null) return null;
-      else front = front.back;
+
+      front = front.back;
+      rear.back = front;
     };
 
     // function to print the values of Queue
@@ -35,7 +39,7 @@ class Queue {
       if (front === null) return null;
 
       // Printing the values
-      for (let cur = front; cur; cur = cur.back) console.log(cur.data);
+      for (let cur = front; cur !== rear; cur = cur.back) console.log(cur.data);
     };
   }
 }
