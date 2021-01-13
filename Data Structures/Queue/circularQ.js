@@ -17,7 +17,7 @@ class circularQueue {
       // loop to iterate over the inpu Values
       for (let data of values) {
         // checking if the Queue is Empty
-        if (front === null) rear = front = new node(data);
+        if (front === rear) rear = front = new node(data);
         else rear = rear.back = new node(data);
         // same as normal Queue only differ is the last node point to front
         rear.back = front;
@@ -27,8 +27,7 @@ class circularQueue {
     // function to delete the values in queue
     this.dequeue = () => {
       // checking if the Queue is Empty
-      if (front === null) return null;
-      else if (rear === front) front = rear = null;
+      if (front === rear) return null;
       else front = front.back;
 
       // same as normal Queue only differ is the last node point to front
@@ -38,7 +37,7 @@ class circularQueue {
     // function to print the values of Queue
     this.traverse = () => {
       // checking if the Queue is Empty
-      if (front === null) return null;
+      if (front === rear) return null;
 
       // Printing the values
       let cur = front;
