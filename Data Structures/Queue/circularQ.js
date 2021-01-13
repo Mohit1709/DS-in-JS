@@ -28,6 +28,7 @@ class circularQueue {
     this.dequeue = () => {
       // checking if the Queue is Empty
       if (front === null) return null;
+      else if (rear === front) front = rear = null;
       else front = front.back;
 
       // same as normal Queue only differ is the last node point to front
@@ -40,7 +41,11 @@ class circularQueue {
       if (front === null) return null;
 
       // Printing the values
-      for (let cur = front; cur !== rear; cur = cur.back) console.log(cur.data);
+      let cur = front;
+      do {
+        console.log(cur.data);
+        cur = cur.back;
+      } while (cur !== front);
     };
   }
 }
