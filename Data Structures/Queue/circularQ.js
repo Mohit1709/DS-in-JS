@@ -19,7 +19,7 @@ class circularQueue {
         // checking if the Queue is Empty
         if (front === null) rear = front = new node(data);
         else rear = rear.back = new node(data);
-
+        // same as normal Queue only differ is the last node point to front
         rear.back = front;
       }
     };
@@ -28,8 +28,9 @@ class circularQueue {
     this.dequeue = () => {
       // checking if the Queue is Empty
       if (front === null) return null;
+      else front = front.back;
 
-      front = front.back;
+      // same as normal Queue only differ is the last node point to front
       rear.back = front;
     };
 
